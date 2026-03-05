@@ -3,5 +3,5 @@ services:
     image: tsukinax/234-deploylab-frontend:latest
     pull_policy: always
     ports:
-      - "8085:80"  
+      - "8081:80"  
     restart: unless-stopped

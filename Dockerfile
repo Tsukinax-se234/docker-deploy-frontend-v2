@@ -1,10 +1,11 @@
 FROM node:22-alpine AS build-stage
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci
+RUN npm install     # <--- แก้ตรงนี้แหละครับ
 COPY . .
 ARG BUILD_MODE=production
 RUN npm run build -- --mode ${BUILD_MODE}
+
 # Production stage
 FROM nginx:alpine AS production-stage
 COPY nginx-custom.conf /etc/nginx/conf.d/default.conf

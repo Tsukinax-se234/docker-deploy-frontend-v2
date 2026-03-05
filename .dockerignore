@@ -6,4 +6,5 @@ README.md
 dist
 coverage
 *.log
+
 .DS_Store

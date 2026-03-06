@@ -1,0 +1,7 @@
+services:
+  frontend-prod:
+    image: tsukinax/234-deploylab-frontend:prod
+    pull_policy: always
+    ports:
+      - "8084:8080"
+    restart: unless-stopped

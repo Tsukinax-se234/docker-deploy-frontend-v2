@@ -8,6 +8,7 @@ VITE_SERVER_URI="${VITE_SERVER_URI:-http://44.200.136.59:8082}"
 # Replace placeholders in all JS files with actual runtime values
 find /usr/share/nginx/html/assets -name '*.js' -exec sed -i \
   "s|__VITE_GRAPHQL_URI_PLACEHOLDER__|${VITE_GRAPHQL_URI}|g" {} +
+  
 
 find /usr/share/nginx/html/assets -name '*.js' -exec sed -i \
   "s|__VITE_SERVER_URI_PLACEHOLDER__|${VITE_SERVER_URI}|g" {} +
